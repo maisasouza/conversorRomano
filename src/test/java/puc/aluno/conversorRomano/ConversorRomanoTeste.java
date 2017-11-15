@@ -35,7 +35,32 @@ public class ConversorRomanoTeste {
 	public void TesteRetornaQuatro() {
 		ConversorRomano conversor = new ConversorRomano();
 		
-		String numRomano = conversor.converter(7);
+		String numRomano = conversor.converter(4);
 		assertEquals("IV", numRomano);
 	}
+	
+	@Test
+	public void TesteRetornaDez() {
+		ConversorRomano conversor = new ConversorRomano();
+		
+		String numRomano = conversor.converter(10);
+		assertEquals("X", numRomano);
+	}
+	
+	@Test
+	public void TesteRetornaCinquenta() {
+		ConversorRomano conversor = new ConversorRomano();
+		
+		String numRomano = conversor.converter(50);
+		assertEquals("L", numRomano);
+	}
+	
+	@Test
+	public void TesteRetornaQuarenta() {
+		ConversorRomano conversor = new ConversorRomano();
+		
+		String numRomano = conversor.converter(50);
+		assertEquals("XL", numRomano);
+	}
+	
 }
